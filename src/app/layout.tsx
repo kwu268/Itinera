@@ -1,10 +1,8 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { client } from "@/graphql/client";
-import { Provider } from "react-redux";
-import { ApolloProvider } from "@apollo/client";
-import { store } from "../store";
+import "../styles/globals.css";
+import { Providers } from "../components/provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,12 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Provider store={store}>
-          <ApolloProvider client={client}>{children}</ApolloProvider>
-        </Provider>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
