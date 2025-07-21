@@ -1,12 +1,11 @@
 // store/index.ts
 import { configureStore } from "@reduxjs/toolkit";
+import vacationPlanReducer from "@/features/vacationPlan/vacationPlanSlice";  
 
 // Example dummy reducer
-const dummyReducer = (state = {}) => state;
-
 export const store = configureStore({
   reducer: {
-    dummy: dummyReducer,
+    vacationPlan: vacationPlanReducer,
   },
 });
 

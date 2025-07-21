@@ -24,6 +24,7 @@
 /info
 .DS_Store
 *.pem
+.prettierrc
 
 # debug
 npm-debug.log*
