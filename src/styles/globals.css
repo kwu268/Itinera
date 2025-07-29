@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "daisyui";
+@import 'tailwind-scrollbar-hide/v4';
 
 :root {
   --background: #ffffff;
@@ -24,3 +26,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+
+
+ 
